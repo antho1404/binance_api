@@ -19,6 +19,8 @@ Task key: **getCoinPriceChange**
 | **coinpair** | `String` | Coin pair ( for example - LTCBTC )  |
 | **interval** | `String` | 1h, 1m, 24h etc (see [binance](https://www.binance.com/en) exchange) |
 | **intervalNum** | `String` | How many intervals to take (if interval 1 and intervalNum2, we get price change for last 2 hour separately)  |
+| **messageType** | `String` | exdented - array of object (priceChange, priceOpen, priceHigh}) or simple ( just array priceChange )   |
+
 
 
 #### Outputs
@@ -37,12 +39,12 @@ Return a `error` with the error message
 
 Output key: **success**
 
-Return the array of tweet object ( tweet object inluce a lot of data, see Twitter API)
+Return the array of number
 
 | **key** | **type** | **description** |
 | --- | --- | --- |
 | **message** | `String ` |  | |
-| **priceChange** | `Array of number ( price changes ) ` |  | |
+| **priceChange** | `Array of number (or objects if messageType = extened` |  | |
 
 
 
